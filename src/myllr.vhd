@@ -4,8 +4,8 @@ use ieee.std_logic_signed.all;
 use ieee.numeric_std.all;
 
 entity myllr is
-port (	simeio	: in signed (39 downto 0);
-		llr		: out signed (5 downto 0)
+port (    simeio    : in signed (39 downto 0);
+        llr        : out signed (5 downto 0)
 );
 end entity;
 
@@ -17,8 +17,8 @@ constant ena2 : signed (44 downto 0):="00000000000001000000000000000000000000000
 constant miden : signed (39 downto 0):="0000000000000000000000000000000000000000";
 constant enaround : signed (39 downto 0):=     "0000000100000000000000000000000000000000";
 constant plinenaround : signed (39 downto 0):= "1111111100000000000000000000000000000000";
-constant trianta1	: signed (5 downto 0):="011111";
-constant pltrianta1	: signed (5 downto 0):="100001"; 
+constant trianta1    : signed (5 downto 0):="011111";
+constant pltrianta1    : signed (5 downto 0):="100001"; 
 
 signal simeio1,simeio2,sfalma1,sfalma2,sfalma: signed (39 downto 0);
 signal temp1,temp2,temp3,temp4,temp5,temp6 : signed (44 downto 0);

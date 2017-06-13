@@ -5,16 +5,16 @@ use IEEE.numeric_std.all;
 
 entity fast is
 generic (
-	n: integer := 8;
-	k: integer := 4
-	);
-port (	clk : in std_logic;
-	rst : in std_logic;
-	wen : in std_logic;
-	a:  in  signed (n-1 downto 0);
-	b:  in  signed (n-1 downto 0);
-	p: out  signed (2*n-1 downto 0)
-	);
+    n: integer := 8;
+    k: integer := 4
+    );
+port (  clk : in std_logic;
+    rst : in std_logic;
+    wen : in std_logic;
+    a:  in  signed (n-1 downto 0);
+    b:  in  signed (n-1 downto 0);
+    p: out  signed (2*n-1 downto 0)
+    );
 end fast;
 
 architecture struct of fast is
@@ -23,11 +23,11 @@ architecture struct of fast is
 component myreg is
 generic(n: integer:=40);
 port(   clk : in std_logic;
-		rst : in std_logic;
-		wen : in std_logic;
-		eisod : in signed (n-1 downto 0);
-		deigma : out signed (n-1 downto 0)
-		);
+        rst : in std_logic;
+        wen : in std_logic;
+        eisod : in signed (n-1 downto 0);
+        deigma : out signed (n-1 downto 0)
+        );
 end component;
 
 signal signextpLL: signed (k-1 downto 0);
@@ -42,8 +42,8 @@ signal pLH,pLH2:  signed (n downto 0);
 signal pHH,pHH2:  signed (2*(n -k) - 1 downto 0);
 --
 
-signal rlow:	signed (k + n + 1 downto 0);
-signal rhigh:	signed ( n + k downto 0);
+signal rlow:    signed (k + n + 1 downto 0);
+signal rhigh:   signed ( n + k downto 0);
 ---
 signal alow, blow : signed (k downto 0);
 signal ahigh, bhigh: signed (n- k-1 downto 0);
@@ -52,10 +52,10 @@ signal result: signed(2*n+1 downto 0);
 begin
 
 alow  <= '0' & a( k -1 downto 0); -- k+1 bits
-ahigh <= 	a(n - 1  downto k); -- n-k bits
+ahigh <=    a(n - 1  downto k); -- n-k bits
 
 blow  <= '0' & b(k -1 downto 0); -- k+1 bits
-bhigh <= 	b(n - 1 downto k); -- n-k bits
+bhigh <=    b(n - 1 downto k); -- n-k bits
 
 pLL <=  alow * blow ; -- 2(k+1) bits
 pLH <=  alow * bhigh; -- n-k+k+1=n+1 bits
@@ -68,7 +68,7 @@ U_rg3: myreg generic map ( n+1) port map (clk=>clk,rst=>rst,wen=>wen,eisod=>pHL,
 U_rg4: myreg generic map ( 2*(n-k)) port map (clk=>clk,rst=>rst,wen=>wen,eisod=>pHH,deigma=>pHH2);
 --------------pipelinestage 1: delay partial products
 
-klow  <= (others => '0'); -- k bits		
+klow  <= (others => '0'); -- k bits     
 signextpLL <= (others => '0'); 
 signextpHL <= (others => pHL2(n));
 

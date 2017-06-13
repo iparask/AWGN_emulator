@@ -6,15 +6,15 @@ use ieee.numeric_std.all;
 entity mac is
 generic(n: integer:=40);
 port (
-		clk : in std_logic;
-		rst : in std_logic;
-		wen1 : in std_logic;
-		wen2 : in std_logic;
-		a : in signed (n-1 downto 0);
-		x : in signed (n-1 downto 0);
-		c : in signed (2*n-1 downto 0);
-		s : out signed (2*n-1 downto 0)
-		);
+        clk : in std_logic;
+        rst : in std_logic;
+        wen1 : in std_logic;
+        wen2 : in std_logic;
+        a : in signed (n-1 downto 0);
+        x : in signed (n-1 downto 0);
+        c : in signed (2*n-1 downto 0);
+        s : out signed (2*n-1 downto 0)
+        );
 end mac;
 
 architecture struct of mac is
@@ -23,16 +23,16 @@ signal p,p1: signed (2*n-1 downto 0);
 
 component fast is
 generic (
-	n: integer := 8;
-	k: integer := 4
-	);
-port (	clk : in std_logic;
-	rst : in std_logic;
-	wen : in std_logic;
-	a:  in  signed (n-1 downto 0);
-	b:  in  signed (n-1 downto 0);
-	p: out  signed (2*n-1 downto 0)
-	);
+    n: integer := 8;
+    k: integer := 4
+    );
+port (  clk : in std_logic;
+    rst : in std_logic;
+    wen : in std_logic;
+    a:  in  signed (n-1 downto 0);
+    b:  in  signed (n-1 downto 0);
+    p: out  signed (2*n-1 downto 0)
+    );
 end component;
 
 begin

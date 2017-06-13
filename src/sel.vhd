@@ -4,9 +4,9 @@ use ieee.std_logic_signed.all;
 use ieee.numeric_std.all;
 
 entity sel is
-port(   eisodos1	: in signed (39 downto 0);
-	eksodos1	: out signed (39 downto 0)
-		);
+port(   eisodos1    : in signed (39 downto 0);
+    eksodos1    : out signed (39 downto 0)
+        );
 end entity;
 
 architecture struct of sel is
@@ -26,13 +26,13 @@ begin
 pr1:process(eisodos1)
 begin
 if (miden<=eisodos1 and eisodos1<pimiso) then
-	eksodos1<=eisodos1;
+    eksodos1<=eisodos1;
 elsif (pimiso<=eisodos1 and eisodos1<pi) then
-	eksodos1<=pi-eisodos1;
+    eksodos1<=pi-eisodos1;
 elsif (pi<=eisodos1 and eisodos1<pi32) then
-	eksodos1<=eisodos1-pi;
+    eksodos1<=eisodos1-pi;
 else
-	eksodos1<=pi2-eisodos1;
+    eksodos1<=pi2-eisodos1;
 end if;
 end process;
 

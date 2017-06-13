@@ -7,10 +7,10 @@ use ieee.numeric_std.all;
 entity myreg2 is
 generic(n: integer:=40);
 port(   clk : in std_logic;
-		rst : in std_logic;
-		eisod : in signed (n-1 downto 0);
-		deigma : out signed (n-1 downto 0)
-		);
+        rst : in std_logic;
+        eisod : in signed (n-1 downto 0);
+        deigma : out signed (n-1 downto 0)
+        );
 end entity;
 
 

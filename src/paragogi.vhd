@@ -4,9 +4,9 @@ use ieee.std_logic_signed.all;
 use ieee.numeric_std.all;
 
 entity paragogi is
-port(   eisodos	: in signed (31 downto 0);
-		eksodos	: out signed (31 downto 0)
-		);
+port(   eisodos    : in signed (31 downto 0);
+        eksodos    : out signed (31 downto 0)
+        );
 end entity;
 
 architecture struct of paragogi is

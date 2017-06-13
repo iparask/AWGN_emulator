@@ -8,8 +8,8 @@ use ieee.numeric_std.all;
 entity shifting is
 generic (n: integer:=8);
 port (  arithmos: in signed (N-1 downto 0);
-	theseis:in signed (N-2 downto 0);
-	eksodos: out signed (N-1 downto 0) );
+    theseis:in signed (N-2 downto 0);
+    eksodos: out signed (N-1 downto 0) );
 end shifting;
 
 architecture Behavioral of shifting is

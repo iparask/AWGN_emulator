@@ -6,8 +6,8 @@ use ieee.numeric_std.all;
 
 entity mybpsk is
 port(   simeio : in std_logic;
-		symbol : out signed (79 downto 0)
-		);
+        symbol : out signed (79 downto 0)
+        );
 end entity;
 
 

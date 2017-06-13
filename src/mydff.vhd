@@ -6,10 +6,10 @@ use ieee.numeric_std.all;
 
 entity mydff is
 port(   clk : in std_logic;
-		rst : in std_logic;
-		eisod : in std_logic;
-		deigma : out std_logic
-		);
+        rst : in std_logic;
+        eisod : in std_logic;
+        deigma : out std_logic
+        );
 end entity;
 
 

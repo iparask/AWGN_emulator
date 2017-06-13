@@ -5,11 +5,11 @@ use ieee.numeric_std.all;
 
 entity myerrcount is
 port ( clk : in std_logic;
-		rst : in std_logic;
-		en : in std_logic;
-		err : in std_logic_vector (1 downto 0);
-		count : out std_logic_vector (63 downto 0)
-		);
+        rst : in std_logic;
+        en : in std_logic;
+        err : in std_logic_vector (1 downto 0);
+        count : out std_logic_vector (63 downto 0)
+        );
 end entity;
 
 
@@ -28,7 +28,7 @@ begin
          cnt <=(others => '0');
       elsif en='1' then
          cnt <=cnt+err1+err2;
-	 end if;
+     end if;
    end if;
 end process;
 

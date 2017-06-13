@@ -5,8 +5,8 @@ use ieee.numeric_std.all;
 
 entity synt5 is
 port( 
-	  address1	: in signed (5 downto 0);
-	  stoixeio1	: out signed (40-1 downto 0)
+      address1    : in signed (5 downto 0);
+      stoixeio1    : out signed (40-1 downto 0)
 );
 end synt5;
 

@@ -4,10 +4,10 @@ use ieee.std_logic_signed.all;
 use ieee.numeric_std.all;
 
 entity sel2 is
-port(   eisodos1	: in signed (39 downto 0);
-	eisodos2	: in signed (39 downto 0);
-	eksodos1	: out signed (39 downto 0)
-		);
+port(   eisodos1    : in signed (39 downto 0);
+    eisodos2    : in signed (39 downto 0);
+    eksodos1    : out signed (39 downto 0)
+        );
 end entity;
 
 architecture struct of sel2 is
@@ -24,13 +24,13 @@ begin
 pr1:process(eisodos1,eisodos2)
 begin
 if (miden<=eisodos1 and eisodos1<pimiso) then
-	eksodos1<=eisodos2;
+    eksodos1<=eisodos2;
 elsif (pimiso<=eisodos1 and eisodos1<pi) then
-	eksodos1<=-eisodos2;
+    eksodos1<=-eisodos2;
 elsif (pi<=eisodos1 and eisodos1<pi32) then
-	eksodos1<=-eisodos2;
+    eksodos1<=-eisodos2;
 else
-	eksodos1<=eisodos2;
+    eksodos1<=eisodos2;
 end if;
 end process;
 

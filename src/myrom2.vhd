@@ -5,14 +5,14 @@ use ieee.numeric_std.all;
 
 entity myrom2 is
 port( 
-	  address1	: in signed (9 downto 0);
-	  address2	: in signed (9 downto 0);
-	  address3	: in signed (9 downto 0);
-	  address4	: in signed (9 downto 0);
-	  stoixeio1	: out signed (31 downto 0);
-	  stoixeio2	: out signed (31 downto 0);
-	  stoixeio3	: out signed (31 downto 0);
-	  stoixeio4	: out signed (31 downto 0)
+      address1    : in signed (9 downto 0);
+      address2    : in signed (9 downto 0);
+      address3    : in signed (9 downto 0);
+      address4    : in signed (9 downto 0);
+      stoixeio1    : out signed (31 downto 0);
+      stoixeio2    : out signed (31 downto 0);
+      stoixeio3    : out signed (31 downto 0);
+      stoixeio4    : out signed (31 downto 0)
 );
 end myrom2;
 

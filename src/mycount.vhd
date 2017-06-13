@@ -5,10 +5,10 @@ use ieee.numeric_std.all;
 
 entity mycount is
 generic(n: integer:=40);
-port(	clk : in std_logic;
-		rst : in std_logic;
-		en	: in std_logic;
-		cnt : out std_logic_vector (n-1 downto 0)
+port(    clk : in std_logic;
+        rst : in std_logic;
+        en    : in std_logic;
+        cnt : out std_logic_vector (n-1 downto 0)
 );
 end mycount;
 

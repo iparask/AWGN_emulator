@@ -5,10 +5,10 @@ use ieee.numeric_std.all;
 
 entity ananeosi is
 port(   eisodos1: in signed (31 downto 0);
-		eisodos2: in signed (31 downto 0);
-		eisodos3: in signed (31 downto 0);
-		eksodos	: out signed (31 downto 0)
-		);
+        eisodos2: in signed (31 downto 0);
+        eisodos3: in signed (31 downto 0);
+        eksodos : out signed (31 downto 0)
+        );
 end entity;
 
 architecture struct of ananeosi is
